@@ -40,12 +40,11 @@ def index(arrayFotos)
         f.write("<html>\n")
         f.write("\t<head>\n\t\t<title>NASA {APIs}</title>\n\t\t<style>img{width: 250px}</style>\n\t</head>\n")
         f.write("\t<body>\n")
-
+        f.write("\t\t<ul>\n")
         arrayFotos.each do |fotos| 
-            f.write("\t\t<img src=\"#{fotos}\">\n" )
-            f.write("\t\t<p>#{}</p>")
+            f.write("\t\t\t<li><img src=\"#{fotos}\"></li>\n" )
         end
-
+        f.write("\t\t</ul>\n")
         f.write("\t</body>\n</html>\n")
     end
 end
